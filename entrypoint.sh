@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+git fetch origin
 git branch $1 origin/$1
 
 number_of_commits=$(git rev-list --count HEAD ^$1)
