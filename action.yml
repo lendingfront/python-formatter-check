@@ -1,0 +1,12 @@
+name: 'Python Formatter Check'
+description: 'Greet someone and record the time'
+inputs:
+  branch:
+    description: 'Who to greet'
+    required: true
+    default: 'staging'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.branch }}
