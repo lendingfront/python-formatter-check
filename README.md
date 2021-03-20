@@ -23,6 +23,8 @@ with:
 ```yml
 - name: Checkout branch
     uses: actions/checkout@v2
+    with:
+        fetch-depth: 0 # Fetch all history for all branches and tags
 - name: Python Formatter Check
     uses: lendingfront/python-formatter-check@main
     with:
